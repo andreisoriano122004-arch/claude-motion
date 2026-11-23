@@ -5,6 +5,7 @@ import {EffortVideo} from './EffortVideo';
 import {FPS, H, TL, W} from './lib';
 import {FPS as REEL_FPS, REEL_H, REEL_W, Reel333} from './reel333/Reel333';
 import {OCTO_FPS, OCTO_H, OCTO_W, OctoReel} from './octo/OctoReel';
+import {PYR_FPS, PYR_H, PYR_W, PyrReel} from './pyr/PyrReel';
 
 export const Root: React.FC = () => (
   <>
@@ -31,6 +32,14 @@ export const Root: React.FC = () => (
       fps={OCTO_FPS}
       width={OCTO_W}
       height={OCTO_H}
+    />
+    <Composition
+      id="PyrReel"
+      component={PyrReel}
+      durationInFrames={60 * PYR_FPS}
+      fps={PYR_FPS}
+      width={PYR_W}
+      height={PYR_H}
     />
     <Still id="ArticleCover" component={ArticleCover} width={2000} height={800} />
   </>
