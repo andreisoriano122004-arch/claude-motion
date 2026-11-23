@@ -6,6 +6,7 @@ import {FPS, H, TL, W} from './lib';
 import {FPS as REEL_FPS, REEL_H, REEL_W, Reel333} from './reel333/Reel333';
 import {OCTO_FPS, OCTO_H, OCTO_W, OctoReel} from './octo/OctoReel';
 import {PYR_FPS, PYR_H, PYR_W, PyrReel} from './pyr/PyrReel';
+import {MOON_FPS, MOON_H, MOON_W, MoonReel} from './moon/MoonReel';
 
 export const Root: React.FC = () => (
   <>
@@ -40,6 +41,14 @@ export const Root: React.FC = () => (
       fps={PYR_FPS}
       width={PYR_W}
       height={PYR_H}
+    />
+    <Composition
+      id="MoonReel"
+      component={MoonReel}
+      durationInFrames={60 * MOON_FPS}
+      fps={MOON_FPS}
+      width={MOON_W}
+      height={MOON_H}
     />
     <Still id="ArticleCover" component={ArticleCover} width={2000} height={800} />
   </>
