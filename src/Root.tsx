@@ -8,6 +8,7 @@ import {OCTO_FPS, OCTO_H, OCTO_W, OctoReel} from './octo/OctoReel';
 import {PYR_FPS, PYR_H, PYR_W, PyrReel} from './pyr/PyrReel';
 import {MOON_FPS, MOON_H, MOON_W, MoonReel} from './moon/MoonReel';
 import {BEE_FPS, BEE_H, BEE_W, BeeReel} from './bees/BeeReel';
+import {OWL_FPS, OWL_H, OWL_W, OwlReel} from './owls/OwlReel';
 
 export const Root: React.FC = () => (
   <>
@@ -58,6 +59,14 @@ export const Root: React.FC = () => (
       fps={BEE_FPS}
       width={BEE_W}
       height={BEE_H}
+    />
+    <Composition
+      id="OwlReel"
+      component={OwlReel}
+      durationInFrames={60 * OWL_FPS}
+      fps={OWL_FPS}
+      width={OWL_W}
+      height={OWL_H}
     />
     <Still id="ArticleCover" component={ArticleCover} width={2000} height={800} />
   </>
